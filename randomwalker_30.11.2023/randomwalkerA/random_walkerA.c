@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <time.h>
 
-#define STEPS 10 //Αριθμός βημάτων του περιπατητή
+#define STEPS 50 //Αριθμός βημάτων του περιπατητή
 
 int main(){
 
