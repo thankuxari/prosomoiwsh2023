@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <time.h>
 
-#define STEPS 10 //Αριθμός βημάτων του περιπατητή
+#define STEPS 1000 //Αριθμός βημάτων του περιπατητή
 #define WALKERS 1000 //Αριθμός περιπατητών
 
 int main(){
@@ -44,7 +44,7 @@ int main(){
         }
 
         //Print το Final Step του περιπατητή
-        fprintf(fptr,"Walker:%d Final Position:%d \n",j,STARTING);
+        fprintf(fptr,"%d;%d \n",j,STARTING);
     }
     
     return 0;

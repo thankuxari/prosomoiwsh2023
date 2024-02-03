@@ -4,7 +4,7 @@
 
 #define INFORMED 1 // Κατάσταση 1  = ο sensor είναι informed
 #define NOTINFORMED 0 // Κατάσταση 0 = Ο sensor δεν είναι informed
-#define N 20 //Αριθμός sensors
+#define N 50 //Αριθμός sensors
 
 
 int main(){
@@ -37,7 +37,7 @@ int main(){
         step++;
         
         //printf("Num of informed sensor on step(%d): %d \n",step,informedCounter);
-        fprintf(fptr,"Num of informed sensor on step(%d) %d \n",step,informedCounter);
+        fprintf(fptr,"%d;%d \n",step,informedCounter);
     }
     return 0;
 }

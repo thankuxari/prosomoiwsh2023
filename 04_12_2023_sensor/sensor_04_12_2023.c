@@ -13,7 +13,7 @@ int main(){
 
     FILE *fptr;
 
-    fptr = fopen("sensorB.txt","w");
+    fptr = fopen("sensor.txt","w");
 
     //Δισδιάστατος πίνακας N * N διαστάσεις
     int sensor[N][N] = {NOTINFORMED};
@@ -22,7 +22,7 @@ int main(){
     sensor[rand()%N][rand()%N] = INFORMED;
 
     //Αύξηση του Counter των informed
-    int informedCounter = 1;
+    float informedCounter = 1;
 
     int step = 0;
 
@@ -30,20 +30,14 @@ int main(){
     while(informedCounter < N*N){
         int rand1 = rand()%N;
         int rand2 = rand()%N;
-
-        //Change inform rate
-        int rand3 = rand()% 10;
-
-        if(rand3 < 8){
-            if(sensor[rand1][rand2]==NOTINFORMED){
-                sensor[rand1][rand2]= INFORMED;
-                informedCounter++;
-            }
+        if(sensor[rand1][rand2]==NOTINFORMED){
+            sensor[rand1][rand2]= INFORMED;
+            informedCounter++;
         }
         step++;
         
         //printf("Num of informed sensor on step(%d): %d \n",step,informedCounter);
-        fprintf(fptr,"%d;%d \n",step,informedCounter);
+        fprintf(fptr,"Num of informed sensor on step(%d) %0.3f \n",step,(informedCounter/N));
     }
     return 0;
 }
